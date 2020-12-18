@@ -11,6 +11,6 @@ class HeaderInterceptors extends InterceptorsWrapper {
     ///超时
     options.connectTimeout = 15000;
 
-    return options;
+   // return options;
   }
 }

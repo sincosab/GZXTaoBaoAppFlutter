@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_taobao/common/services/address.dart';
-import 'package:quiver/strings.dart';
+//import 'package:quiver/strings.dart';
 import 'dart:math' as math;
 import 'package:url_launcher/url_launcher.dart';
 import 'navigator_utils.dart';
@@ -19,7 +19,7 @@ class CommonUtils {
   static Color string2Color(String colorString) {
     int value = 0x00000000;
 
-    if (isNotEmpty(colorString)) {
+  //  if (isNotEmpty(colorString)) {
       if (colorString[0] == '#') {
         colorString = colorString.substring(1);
       }
@@ -28,7 +28,7 @@ class CommonUtils {
         if (value < 0xFF000000) {
           value += 0xFF000000;
         }
-      }
+   //   }
     }
     return Color(value);
   }

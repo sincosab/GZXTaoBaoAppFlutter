@@ -35,7 +35,7 @@ class _SliverWithTabBarState extends State<SliverWithTabBar> with SingleTickerPr
                   // This is not necessary if the "headerSliverBuilder" only builds
                   // widgets that do not overlap the next sliver.
                   handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
-                  child: SliverSafeArea(
+                  sliver: SliverSafeArea(
                     top: false,
                     sliver: SliverAppBar(
                       title: const Text('Books'),

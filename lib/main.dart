@@ -24,7 +24,7 @@ SpUtil sp;
 var db;
 
 void main() async {
-  final provider = new Provider();
+ /* final provider = new Provider();
   await provider.init(true);
   sp = await SpUtil.getInstance();
   db = Provider.db;
@@ -33,7 +33,7 @@ void main() async {
     SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(statusBarColor: Colors.transparent);
     SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
   }
-
+  WidgetsFlutterBinding.ensureInitialized();*/
   runApp(MyApp());
 }
 
@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
+      //debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -62,8 +62,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: GZXColors.primarySwatch,
 //        primaryColor: GZXColors.primarySwatch,
       ),
-      home: GZXBottomNavigationBar(),
-//    home:  SliverWithTabBar(),
+     home: GZXBottomNavigationBar(),
+ // home:  SliverWithTabBar(),
 //      home: GZXDropDownMenuTestPage(),
 //    home: TextFieldTestPage(),
 //    home: MyHomePage1(),

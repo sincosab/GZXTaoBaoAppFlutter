@@ -12,15 +12,15 @@ class ResponseInterceptors extends InterceptorsWrapper {
   onResponse(Response response) {
     RequestOptions option = response.request;
     try {
-      if (option.contentType != null && option.contentType.primaryType == "text") {
-        return new ResultData(response.data, true, Code.SUCCESS);
+      if (option.contentType != null && option.contentType.runtimeType == "text") {
+       new ResultData(response.data, true, Code.SUCCESS);
       }
       if (response.statusCode == 200 || response.statusCode == 201) {
-        return new ResultData(response.data, true, Code.SUCCESS, headers: response.headers);
+     new ResultData(response.data, true, Code.SUCCESS, headers: response.headers);
       }
     } catch (e) {
       print(e.toString() + option.path);
-      return new ResultData(response.data, false, response.statusCode, headers: response.headers);
+     new ResultData(response.data, false, response.statusCode, headers: response.headers);
     }
   }
 }
